@@ -1,0 +1,12 @@
+version: "2.1"
+
+services:
+  web:
+    image: wodby/drupal-nginx:latest
+    volumes:
+      # Suppress the permissions fixer script in wodby/drupal-nginx
+      - ${PROJECT_ROOT}/.docksal/services/web/fix-permissions.sh:/usr/local/bin/fix-permissions.sh
+    environment:
+      - NGINX_BACKEND_HOST=cli
+      - NGINX_SERVER_ROOT=/var/www/${DOCROOT}
+    working_dir: /var/www/${DOCROOT}
