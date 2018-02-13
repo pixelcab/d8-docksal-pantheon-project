@@ -115,6 +115,9 @@
         ]
     },
     "extra": {
+        "installer-types": [
+            "pixelcab-docksal-commands"
+        ],
         "installer-paths": {
             ".docksal/addons": ["pixelcab/docksal-commands"],
             "web/core": ["type:drupal-core"],
