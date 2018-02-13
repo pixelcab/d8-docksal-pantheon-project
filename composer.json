@@ -13,6 +13,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:pixelcab/docksal-commands.git"
         }
     ],
     "require": {
@@ -79,7 +83,8 @@
         "webflo/drupal-core-require-dev": "~8.4",
         "drupal/devel": "^1.2",
         "drupal/drupal-extension": "^3.3",
-        "drupal/stage_file_proxy": "^1.0@alpha"
+        "drupal/stage_file_proxy": "^1.0@alpha",
+        "pixelcab/docksal-commands": "dev-master"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -111,6 +116,7 @@
     },
     "extra": {
         "installer-paths": {
+            ".docksal/addons": ["pixelcab/docksal-commands"],
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
